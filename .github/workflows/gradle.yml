@@ -17,11 +17,10 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  example_matrix:
       strategy:
         matrix:
           os: [windows-latest, macos-latest, ubuntu-latest]
-          jdk: [8, 11, 17]
 
       runs-on: ${{matrix.os}}
       steps:
